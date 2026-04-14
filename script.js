@@ -32,15 +32,18 @@ class PencilApp {
     }
 
     resize() {
-        const width = window.innerWidth;
-        const height = window.innerHeight;
+        const wrapper = document.querySelector('.canvas-wrapper');
+        const width = wrapper.clientWidth;
+        const height = wrapper.clientHeight;
 
         // Create temporary canvas to hold existing image
         const offscreen = document.createElement('canvas');
         offscreen.width = this.canvas.width;
         offscreen.height = this.canvas.height;
         const offCtx = offscreen.getContext('2d');
-        offCtx.drawImage(this.canvas, 0, 0);
+        if (this.canvas.width > 0 && this.canvas.height > 0) {
+            offCtx.drawImage(this.canvas, 0, 0);
+        }
 
         // Resize main canvases
         this.canvas.width = width;
