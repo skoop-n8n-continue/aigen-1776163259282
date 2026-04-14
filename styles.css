@@ -1,7 +1,7 @@
 :root {
     --primary-color: #00b7af;
     --dark-bg: #10181f;
-    --light-bg: #ffffff;
+    --light-bg: #000000;
     --secondary-gray: #6a7071;
     --danger-red: #ff4d4d;
     --success-green: #2ecc71;
@@ -35,13 +35,7 @@ body, html {
     position: relative;
     flex-grow: 1;
     width: 100%;
-    background-image:
-        linear-gradient(45deg, #f0f0f0 25%, transparent 25%),
-        linear-gradient(-45deg, #f0f0f0 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, #f0f0f0 75%),
-        linear-gradient(-45deg, transparent 75%, #f0f0f0 75%);
-    background-size: 20px 20px;
-    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    background-color: #000000;
 }
 
 canvas {

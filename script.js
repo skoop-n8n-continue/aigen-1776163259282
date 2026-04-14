@@ -225,7 +225,7 @@ class PencilApp {
         const dCtx = downloadCanvas.getContext('2d');
 
         // Background
-        dCtx.fillStyle = '#ffffff';
+        dCtx.fillStyle = '#000000';
         dCtx.fillRect(0, 0, downloadCanvas.width, downloadCanvas.height);
 
         // Content
