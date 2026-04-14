@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Pencil App</title>
+    <link rel="stylesheet" href="styles.css?v=m2n5b8">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Main Canvas Area -->
+        <div class="canvas-wrapper">
+            <canvas id="main-canvas"></canvas>
+            <canvas id="temp-canvas"></canvas>
+        </div>
+
+        <!-- Toolbar -->
+        <div class="toolbar">
+            <div class="tool-group">
+                <button id="pencil-tool" class="tool-btn active" title="Pencil">
+                    <svg viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+                </button>
+                <button id="eraser-tool" class="tool-btn" title="Eraser">
+                    <svg viewBox="0 0 24 24"><path d="M16.24 3.56l4.95 4.95c.78.78.78 2.05 0 2.83L11.75 20.78c-.78.78-2.05.78-2.83 0L3.56 15.36c-.78-.78-.78-2.05 0-2.83L16.24 3.56zM15.5 13.5l-4 4"/></svg>
+                </button>
+            </div>
+
+            <div class="separator"></div>
+
+            <div class="tool-group">
+                <div class="color-picker-wrapper">
+                    <input type="color" id="color-picker" value="#00b7af">
+                    <div id="color-preview" class="color-preview" style="background-color: #00b7af;"></div>
+                </div>
+                <div class="size-control">
+                    <input type="range" id="size-slider" min="1" max="100" value="5">
+                    <span id="size-value">5px</span>
+                </div>
+            </div>
+
+            <div class="separator"></div>
+
+            <div class="tool-group">
+                <button id="undo-btn" class="tool-btn" title="Undo">
+                    <svg viewBox="0 0 24 24"><path d="M12.5 8c-2.65 0-5.05.99-6.9 2.6L2 7v9h9l-3.62-3.62c1.39-1.16 3.16-1.88 5.12-1.88 3.54 0 6.55 2.31 7.6 5.5l2.37-.78C21.08 11.03 17.15 8 12.5 8z"/></svg>
+                </button>
+                <button id="clear-btn" class="tool-btn danger" title="Clear Canvas">
+                    <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+                </button>
+                <button id="download-btn" class="tool-btn success" title="Download">
+                    <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js?v=m2n5b8"></script>
+</body>
+</html>
